@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>IPython for Web Devs - IPython for Web Devs</title>
+        <title>InteractiveShellApp.exec_lines - IPython for Web Devs</title>
         
         
 
@@ -19,23 +19,23 @@
 
         
         
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
         
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -45,7 +45,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html" class="active">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.1.</strong> InteractiveShellApp.exec_lines</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.2.</strong> InteractiveShellApp.banner1</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded affix "><a href="colophon.html">Colophon</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="../how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="../not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="../prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="../setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="../profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="../ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../config/exec_lines.html" class="active"><strong aria-hidden="true">8.1.</strong> InteractiveShellApp.exec_lines</a></li><li class="chapter-item expanded "><a href="../config/banner1.html"><strong aria-hidden="true">8.2.</strong> InteractiveShellApp.banner1</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded affix "><a href="../colophon.html">Colophon</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -128,7 +128,7 @@
                     <script type="text/javascript">
                         var bookTitleElement = document.getElementById('book-title')
                         var bookTitle = 'IPython for Web Devs';
-                        var chapterTitle = 'IPython for Web Devs';
+                        var chapterTitle = 'InteractiveShellApp.exec_lines';
                         if (bookTitle === chapterTitle) {
                             bookTitleElement.innerText = null;
                             document.title = bookTitle;
@@ -169,19 +169,35 @@
 
                 <div id="content" class="content">
                     <main>
-                        <div class="cover-huge">IPython for Web Devs</div>
-<div class="center-image"><img src="theme/cover-snake.png"></div>
-<div class="cover-medium">by Eric Hamiter</div>
-<div class="cover-small">&copy; 2020</div>
+                        <h1><a class="header" href="#interactiveshellappexec_lines" id="interactiveshellappexec_lines">InteractiveShellApp.exec_lines</a></h1>
+<pre class="output">
+## lines of code to run at IPython startup.
+#  Default: []
+</pre>
+<p><code>InteractiveShellApp.exec_lines</code> is a list that will execute on IPython’s startup. You could put in</p>
+<pre><code>c.InteractiveShellApp.exec_lines.append('import this')
+</code></pre>
+<p>if you wanted to see The Zen of Python everytime you fired up the shell. That might not be totally practical, but it could be inspiring. An extension that we will talk more about later is the <code>autoreload</code> extension. It’s pretty nice to have this available without having to manually load it— it lets you change source code in an editor while the shell is still open, and it will reload its value without requiring you to have to restart your session. <sup><a href="#fn1" id="ref1">1</a></sup></p>
+<p>You can enable it to run by default with these lines:</p>
+<pre><code>c.InteractiveShellApp.exec_lines = []
+c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
+c.InteractiveShellApp.exec_lines.append('%autoreload 2')    
+</code></pre>
+<hr />
+<p><sup id="fn1">1. As with anything seemingly too good to be true, <a href="https://ipython.org/ipython-doc/stable/config/extensions/autoreload.html#caveats">it does have its caveats</a> and doesn’t work for every case. It works most of the time, though, and can save you a lot of time.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="../ipython-config.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
-                            <a rel="next" href="introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../config/banner1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -193,9 +209,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="../ipython-config.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
                 
-                    <a rel="next" href="introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../config/banner1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -218,14 +238,14 @@
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         

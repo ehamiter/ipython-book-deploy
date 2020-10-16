@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Magic Commands</div></li><li class="chapter-item expanded affix "><a href="colophon.html">Colophon</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.1.</strong> InteractiveShellApp.exec_lines</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.2.</strong> InteractiveShellApp.banner1</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded affix "><a href="colophon.html">Colophon</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -253,7 +253,7 @@ IPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.
 In [1]:
 </pre>
 <h1><a class="header" href="#profiles" id="profiles">Profiles</a></h1>
-<p>IPython has support for multiple profiles. This is handy if you are working on different projects and want to tweak some behaviors, or test out new settings without changing how IPython will behave globally. By default, IPython will always run the <code>default</code> profile. Once you specify a new profile to create, new configuration files will be created. To create a new profile named <code>zagnut</code><sup><a href="profiles.html#fn1" id="ref1">1</a></sup>, enter:</p>
+<p>IPython has support for multiple profiles. This is handy if you are working on different projects and want to tweak some behaviors, or test out new settings without changing how IPython will behave globally. By default, IPython will always run the <code>default</code> profile. Once you specify a new profile to create, new configuration files will be created. To create a new profile named <code>zagnut</code>, enter: <sup><a href="profiles.html#fn1" id="ref1">1</a></sup></p>
 <pre><code>ipython profile create zagnut
 </code></pre>
 <pre class="output">
@@ -279,6 +279,43 @@ In [1]:
 </pre>
 <hr />
 <p><sup id="fn1">1. We all remember <a href="https://www.youtube.com/watch?v=IwV90NvsmAI&amp;t=0m20s">the candy bar of choice for Beetlejuice</a>, right? No? Just me?<a href="profiles.html#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup></p>
+<h1><a class="header" href="#ipython_configpy" id="ipython_configpy">ipython_config.py</a></h1>
+<p>Once you have created your profile, open up its configuration file in your favorite text editor:</p>
+<pre><code>ipython locate profile zagnut
+</code></pre>
+<pre class="output">
+/Users/eric/.ipython/profile_zagnut
+</pre>
+<pre><code>&quot;${EDITOR:-vi}&quot; ~/.ipython/profile_zagnut/ipython_config.py
+</code></pre>
+<p>This file is over 1,000 lines of code, so there’s a lot to take in— we’ll focus on a handful of things that are practical and help tailor your IPython experience.</p>
+<h1><a class="header" href="#interactiveshellappexec_lines" id="interactiveshellappexec_lines">InteractiveShellApp.exec_lines</a></h1>
+<pre class="output">
+## lines of code to run at IPython startup.
+#  Default: []
+</pre>
+<p><code>InteractiveShellApp.exec_lines</code> is a list that will execute on IPython’s startup. You could put in</p>
+<pre><code>c.InteractiveShellApp.exec_lines.append('import this')
+</code></pre>
+<p>if you wanted to see The Zen of Python everytime you fired up the shell. That might not be totally practical, but it could be inspiring. An extension that we will talk more about later is the <code>autoreload</code> extension. It’s pretty nice to have this available without having to manually load it— it lets you change source code in an editor while the shell is still open, and it will reload its value without requiring you to have to restart your session. <sup><a href="config/exec_lines.html#fn1" id="ref1">1</a></sup></p>
+<p>You can enable it to run by default with these lines:</p>
+<pre><code>c.InteractiveShellApp.exec_lines = []
+c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
+c.InteractiveShellApp.exec_lines.append('%autoreload 2')    
+</code></pre>
+<hr />
+<p><sup id="fn1">1. As with anything seemingly too good to be true, <a href="https://ipython.org/ipython-doc/stable/config/extensions/autoreload.html#caveats">it does have its caveats</a> and doesn’t work for every case. It works most of the time, though, and can save you a lot of time.<a href="config/exec_lines.html#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup></p>
+<h1><a class="header" href="#interactiveshellappbanner1" id="interactiveshellappbanner1">InteractiveShellApp.banner1</a></h1>
+<pre class="output">
+## The part of the banner to be printed before the profile
+#  Default: "Python 3.8.2 (default, Jul  5 2020, 15:01:50) \nType 'copyright', 'credits' or 'license' for more information\nIPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.\n"
+</pre>
+<p>You can customize the banner that is displayed on startup-- if you’re the kind of person who’s into that kind of thing. You could cut it down to the important bits if you <em>are</em> into the whole brevity thing:</p>
+<pre><code>c.InteractiveShell.banner1 = &quot;Python 3.8.2 -- IPython 7.18.1\n&quot;
+</code></pre>
+<p>…or eliminate it entirely:</p>
+<pre><code>c.TerminalIPythonApp.display_banner = False
+</code></pre>
 <h1><a class="header" href="#colophon" id="colophon">Colophon</a></h1>
 <p><span class="smallcaps">The body text</span> of <em>IPython for Web Devs</em> is set in <a href="https://fonts.google.com/specimen/Gentium+Basic">Gentium Book Basic</a>, which was designed by Victor Gaultney. The Gentium Book Basic font family is based on the original Gentium design, but with additional weights. The family comes with a complete regular, bold, italic and bold italic set of fonts.</p>
 <p><span class="smallcaps">The side chapter text</span> is set in <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a>, a humanist sans serif typeface which was designed by Steve Matteson. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.</p>

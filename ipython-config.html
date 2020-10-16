@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>IPython for Web Devs - IPython for Web Devs</title>
+        <title>ipython_config.py - IPython for Web Devs</title>
         
         
 
@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html" class="active">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.1.</strong> InteractiveShellApp.exec_lines</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.2.</strong> InteractiveShellApp.banner1</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded affix "><a href="colophon.html">Colophon</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html" class="active"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.1.</strong> InteractiveShellApp.exec_lines</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.2.</strong> InteractiveShellApp.banner1</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded affix "><a href="colophon.html">Colophon</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -128,7 +128,7 @@
                     <script type="text/javascript">
                         var bookTitleElement = document.getElementById('book-title')
                         var bookTitle = 'IPython for Web Devs';
-                        var chapterTitle = 'IPython for Web Devs';
+                        var chapterTitle = 'ipython_config.py';
                         if (bookTitle === chapterTitle) {
                             bookTitleElement.innerText = null;
                             document.title = bookTitle;
@@ -169,19 +169,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <div class="cover-huge">IPython for Web Devs</div>
-<div class="center-image"><img src="theme/cover-snake.png"></div>
-<div class="cover-medium">by Eric Hamiter</div>
-<div class="cover-small">&copy; 2020</div>
+                        <h1><a class="header" href="#ipython_configpy" id="ipython_configpy">ipython_config.py</a></h1>
+<p>Once you have created your profile, open up its configuration file in your favorite text editor:</p>
+<pre><code>ipython locate profile zagnut
+</code></pre>
+<pre class="output">
+/Users/eric/.ipython/profile_zagnut
+</pre>
+<pre><code>&quot;${EDITOR:-vi}&quot; ~/.ipython/profile_zagnut/ipython_config.py
+</code></pre>
+<p>This file is over 1,000 lines of code, so there’s a lot to take in— we’ll focus on a handful of things that are practical and help tailor your IPython experience.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="profiles.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
-                            <a rel="next" href="introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="config/exec_lines.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -193,9 +203,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="profiles.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
                 
-                    <a rel="next" href="introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="config/exec_lines.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
