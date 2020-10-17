@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>exec_lines - IPython for Web Devs</title>
+        <title>autorestore - IPython for Web Devs</title>
         
         
 
@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="../how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="../not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="../prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="../setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="../profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="../ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../config/autoformatter.html"><strong aria-hidden="true">8.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="../config/autorestore.html"><strong aria-hidden="true">8.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="../config/banner1.html"><strong aria-hidden="true">8.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="../config/colors.html"><strong aria-hidden="true">8.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="../config/confirm_exit.html"><strong aria-hidden="true">8.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="../config/editor.html"><strong aria-hidden="true">8.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="../config/exec_lines.html" class="active"><strong aria-hidden="true">8.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="../config/highlighting_style.html"><strong aria-hidden="true">8.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="../config/pdb.html"><strong aria-hidden="true">8.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Cell Magic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Line Magic</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="../how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="../not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="../prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="../setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="../profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="../ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../config/autoformatter.html"><strong aria-hidden="true">8.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="../config/autorestore.html" class="active"><strong aria-hidden="true">8.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="../config/banner1.html"><strong aria-hidden="true">8.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="../config/colors.html"><strong aria-hidden="true">8.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="../config/confirm_exit.html"><strong aria-hidden="true">8.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="../config/editor.html"><strong aria-hidden="true">8.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="../config/exec_lines.html"><strong aria-hidden="true">8.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="../config/highlighting_style.html"><strong aria-hidden="true">8.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="../config/pdb.html"><strong aria-hidden="true">8.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Cell Magic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Line Magic</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -128,7 +128,7 @@
                     <script type="text/javascript">
                         var bookTitleElement = document.getElementById('book-title')
                         var bookTitle = 'IPython for Web Devs';
-                        var chapterTitle = 'exec_lines';
+                        var chapterTitle = 'autorestore';
                         if (bookTitle === chapterTitle) {
                             bookTitleElement.innerText = null;
                             document.title = bookTitle;
@@ -169,35 +169,28 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#interactiveshellappexec_lines" id="interactiveshellappexec_lines">InteractiveShellApp.exec_lines</a></h1>
+                        <h1><a class="header" href="#autorestore" id="autorestore">autorestore</a></h1>
 <pre class="output">
-## lines of code to run at IPython startup.
-#  Default: []
+## If True, any %store-d variables will be automatically restored when IPython
+#  starts.
+#  Default: False
 </pre>
-<p><code>InteractiveShellApp.exec_lines</code> is a list that will execute on IPython’s startup. You could put in</p>
-<pre><code>c.InteractiveShellApp.exec_lines = ['import this']
+<p><code>%store</code> is a “magic” command that we will discuss in just a bit— for the context needed for the <code>autorestore</code> setting, this allows you to store variables, aliases, and macros in IPython’s database during a session, then after exiting that session, having those values be retrieved automatically upon entering a new session.</p>
+<pre><code>c.StoreMagics.autorestore = True
 </code></pre>
-<p>if you wanted to see <em>The Zen of Python</em> by Tim Peters everytime you fired up the shell. That might not be totally practical, but it could be inspiring. An extension that we will talk more about later is the <code>autoreload</code> extension. It’s pretty nice to have this available without having to manually load it— it lets you change source code in an editor while the shell is still open, and it will reload its value without requiring you to have to restart your session. <sup><a href="#fn2" id="ref2">2</a></sup></p>
-<p>You can enable it to run by default with these lines:</p>
-<pre><code>c.InteractiveShellApp.exec_lines = []
-c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
-c.InteractiveShellApp.exec_lines.append('%autoreload 2')    
-</code></pre>
-<hr />
-<p><sup id="fn2">2. As with anything seemingly too good to be true, <a href="https://ipython.org/ipython-doc/stable/config/extensions/autoreload.html#caveats">it does have its caveats</a> and doesn’t work for every case. It works most of the time, though, and can save you a lot of time.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../config/editor.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../config/autoformatter.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../config/highlighting_style.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../config/banner1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -209,13 +202,13 @@ c.InteractiveShellApp.exec_lines.append('%autoreload 2')
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../config/editor.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../config/autoformatter.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../config/highlighting_style.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../config/banner1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

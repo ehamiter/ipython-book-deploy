@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.1.</strong> InteractiveShellApp.exec_lines</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.2.</strong> InteractiveShellApp.banner1</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded affix "><a href="colophon.html">Colophon</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/autoformatter.html"><strong aria-hidden="true">8.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="config/autorestore.html"><strong aria-hidden="true">8.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="config/colors.html"><strong aria-hidden="true">8.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="config/confirm_exit.html"><strong aria-hidden="true">8.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="config/editor.html"><strong aria-hidden="true">8.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="config/highlighting_style.html"><strong aria-hidden="true">8.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="config/pdb.html"><strong aria-hidden="true">8.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Magic Commands</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Cell Magic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Line Magic</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -289,39 +289,151 @@ In [1]:
 <pre><code>&quot;${EDITOR:-vi}&quot; ~/.ipython/profile_zagnut/ipython_config.py
 </code></pre>
 <p>This file is over 1,000 lines of code, so there’s a lot to take in— we’ll focus on a handful of things that are practical and help tailor your IPython experience.</p>
+<h1><a class="header" href="#terminalinteractiveshellautoformatter" id="terminalinteractiveshellautoformatter">TerminalInteractiveShell.autoformatter</a></h1>
+<pre class="output">
+## Autoformatter to reformat Terminal code. Can be `'black'` or `None`
+#  Default: None
+</pre>
+<p><code>black</code> is <a href="https://github.com/psf/black">the uncompromising Python code formatter</a>. It can make collaboration on a project consistent— no matter the style of the coder, <code>black</code> will format the code to its specifications, so everything is nice and tidy.</p>
+<pre><code>c.TerminalInteractiveShell.autoformatter = 'black'
+</code></pre>
+<p>Enabling this can turn something like this:</p>
+<pre class="output">
+In [1]: prices = {
+   ...: 'apple': 0.40, 'banana': 0.50
+   ...: }
+   ...: my_purchase = {
+   ...:     'apple': 1,
+   ...:     'banana': 6}
+   ...: grocery_bill = sum(
+   ...: prices[fruit] * my_purchase[fruit]
+   ...:                    for fruit in my_purchase
+   ...:                    )
+   ...: print('I owe the grocer $%.2f' % grocery_bill)
+I owe the grocer $3.40
+</pre>
+<p>…into this:</p>
+<pre class="output">
+In [1]: prices = {"apple": 0.40, "banana": 0.50}
+   ...: my_purchase = {"apple": 1, "banana": 6}
+   ...: grocery_bill = sum(prices[fruit] * my_purchase[fruit] for fruit in my_purchase)
+   ...: print("I owe the grocer $%.2f" % grocery_bill)
+I owe the grocer $3.40
+</pre>
+<p>It’s very handy for cleaning up your code style, especially if the project you’re working on uses <code>black</code>. In order for this to work, you need to have <code>black</code> installed in your environment:</p>
+<pre><code>pip install black
+</code></pre>
+<h1><a class="header" href="#autorestore" id="autorestore">autorestore</a></h1>
+<pre class="output">
+## If True, any %store-d variables will be automatically restored when IPython
+#  starts.
+#  Default: False
+</pre>
+<p><code>%store</code> is a “magic” command that we will discuss in just a bit— for the context needed for the <code>autorestore</code> setting, this allows you to store variables, aliases, and macros in IPython’s database during a session, then after exiting that session, having those values be retrieved automatically upon entering a new session.</p>
+<pre><code>c.StoreMagics.autorestore = True
+</code></pre>
+<h1><a class="header" href="#interactiveshellappbanner1" id="interactiveshellappbanner1">InteractiveShellApp.banner1</a></h1>
+<pre class="output">
+## The part of the banner to be printed before the profile
+#  Default: "Python 3.8.2 (default, Jul  5 2020, 15:01:50) \nType 'copyright', 'credits' or 'license' for more information\nIPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.\n"
+</pre>
+<p>You can customize the banner that is displayed on startup-- if you’re the kind of person who’s into that kind of thing. You could cut it down to the important bits if you <em>are</em> into the whole brevity thing: <sup><a href="config/banner1.html#fn3" id="ref3">3</a></sup></p>
+<pre><code>c.InteractiveShell.banner1 = &quot;Python 3.8.2 -- IPython 7.18.1\n&quot;
+</code></pre>
+<p>…or eliminate it entirely:</p>
+<pre><code>c.TerminalIPythonApp.display_banner = False
+</code></pre>
+<hr />
+<p><sup id="fn3">3. <a href="https://www.youtube.com/watch?v=pWdd6_ZxX8c">Yeah? Well, you know, that’s just like, uh… your opinion, man. </a><a href="config/banner1.html#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup></p>
+<h1><a class="header" href="#interactiveshellcolors" id="interactiveshellcolors">InteractiveShell.colors</a></h1>
+<pre class="output">
+## Set the color scheme (NoColor, Neutral, Linux, or LightBG).
+#  Choices: any of ['Neutral', 'NoColor', 'LightBG', 'Linux'] (case-insensitive)
+#  Default: 'Neutral'
+</pre>
+<p>You can select from a few color schemes— I use a dark background for my terminal so the default <code>Neutral</code> works for me, but try out <code>LightBG</code> if you use a light background color, or <code>Linux</code> if you’re really into Linux, or <code>NoColor</code> if you hate rainbows and happiness.</p>
+<pre><code>c.InteractiveShell.colors = 'LightBG'
+</code></pre>
+<h1><a class="header" href="#confirm_exit" id="confirm_exit">confirm_exit</a></h1>
+<pre class="output">
+## Set to confirm when you try to exit IPython with an EOF (Control-D in Unix,
+#  Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
+#  direct exit without any confirmation.
+#  Default: True
+</pre>
+<p>Whenever I quit an IPython session, I’m asked if I really want to quit. I do. Eventually I figured out that you don’t actually have to enter <code>y</code> for yes, though— you can just hit <code>return</code> and it will allow you to quit. There’s a better way, though, which saves you an additional key stroke. Setting this value to <code>False</code> will let you exit immediately.</p>
+<pre><code>c.TerminalInteractiveShell.confirm_exit = False
+</code></pre>
+<h1><a class="header" href="#editor" id="editor">editor</a></h1>
+<pre class="output">
+## Set the editor used by IPython (default to $EDITOR/vi/notepad).
+#  Default: 'subl'
+</pre>
+<p>The default listed above is <code>subl</code> for me because I use Sublime Text as my default editor. For you, it may be <code>vim</code>, <code>vscode</code>, <code>emacs</code>, <code>nano</code>, or any number of text editors. For my particular case, as we will explore later, there is an <code>edit</code> command in IPython, which lets you …well, edit things. For whatever reason, Sublime Text does not work well with the <code>edit</code> command. <sup><a href="config/editor.html#fn4" id="ref4">4</a></sup> Because of this, I want to set IPython’s editor of choice to something else– <code>vim</code>, in my case:</p>
+<pre><code>c.TerminalInteractiveShell.editor = 'vim'
+</code></pre>
+<hr />
+<p><sup id="fn4">4. Once <code>edit</code> is invoked, a temporary file is created. In Sublime’s case, it immediately executes the code instead of waiting for the save signal to execute it, so there is never a chance of actually editing the file. <a href="config/editor.html#ref4" title="Jump back to footnote 4 in the text.">↩</a></sup></p>
 <h1><a class="header" href="#interactiveshellappexec_lines" id="interactiveshellappexec_lines">InteractiveShellApp.exec_lines</a></h1>
 <pre class="output">
 ## lines of code to run at IPython startup.
 #  Default: []
 </pre>
 <p><code>InteractiveShellApp.exec_lines</code> is a list that will execute on IPython’s startup. You could put in</p>
-<pre><code>c.InteractiveShellApp.exec_lines.append('import this')
+<pre><code>c.InteractiveShellApp.exec_lines = ['import this']
 </code></pre>
-<p>if you wanted to see The Zen of Python everytime you fired up the shell. That might not be totally practical, but it could be inspiring. An extension that we will talk more about later is the <code>autoreload</code> extension. It’s pretty nice to have this available without having to manually load it— it lets you change source code in an editor while the shell is still open, and it will reload its value without requiring you to have to restart your session. <sup><a href="config/exec_lines.html#fn1" id="ref1">1</a></sup></p>
+<p>if you wanted to see <em>The Zen of Python</em> by Tim Peters everytime you fired up the shell. That might not be totally practical, but it could be inspiring. An extension that we will talk more about later is the <code>autoreload</code> extension. It’s pretty nice to have this available without having to manually load it— it lets you change source code in an editor while the shell is still open, and it will reload its value without requiring you to have to restart your session. <sup><a href="config/exec_lines.html#fn2" id="ref2">2</a></sup></p>
 <p>You can enable it to run by default with these lines:</p>
 <pre><code>c.InteractiveShellApp.exec_lines = []
 c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
 c.InteractiveShellApp.exec_lines.append('%autoreload 2')    
 </code></pre>
 <hr />
-<p><sup id="fn1">1. As with anything seemingly too good to be true, <a href="https://ipython.org/ipython-doc/stable/config/extensions/autoreload.html#caveats">it does have its caveats</a> and doesn’t work for every case. It works most of the time, though, and can save you a lot of time.<a href="config/exec_lines.html#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup></p>
-<h1><a class="header" href="#interactiveshellappbanner1" id="interactiveshellappbanner1">InteractiveShellApp.banner1</a></h1>
+<p><sup id="fn2">2. As with anything seemingly too good to be true, <a href="https://ipython.org/ipython-doc/stable/config/extensions/autoreload.html#caveats">it does have its caveats</a> and doesn’t work for every case. It works most of the time, though, and can save you a lot of time.<a href="config/exec_lines.html#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup></p>
+<h1><a class="header" href="#highlighting_style" id="highlighting_style">highlighting_style</a></h1>
 <pre class="output">
-## The part of the banner to be printed before the profile
-#  Default: "Python 3.8.2 (default, Jul  5 2020, 15:01:50) \nType 'copyright', 'credits' or 'license' for more information\nIPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.\n"
+## The name or class of a Pygments style to use for syntax highlighting. To see
+#  available styles, run `pygmentize -L styles`.
+#  Default: traitlets.Undefined
 </pre>
-<p>You can customize the banner that is displayed on startup-- if you’re the kind of person who’s into that kind of thing. You could cut it down to the important bits if you <em>are</em> into the whole brevity thing:</p>
-<pre><code>c.InteractiveShell.banner1 = &quot;Python 3.8.2 -- IPython 7.18.1\n&quot;
+<p><a href="https://pygments.org/">Pygments</a> is a generic syntax highlighter used to prettify source code. You can set your style of choice by entering:</p>
+<pre><code>c.TerminalInteractiveShell.highlighting_style = 'monokai'
 </code></pre>
-<p>…or eliminate it entirely:</p>
-<pre><code>c.TerminalIPythonApp.display_banner = False
+<p>It is dependent on the <code>Pygments</code> library, which can be installed via:</p>
+<pre><code>pip install Pygments
 </code></pre>
-<h1><a class="header" href="#colophon" id="colophon">Colophon</a></h1>
-<p><span class="smallcaps">The body text</span> of <em>IPython for Web Devs</em> is set in <a href="https://fonts.google.com/specimen/Gentium+Basic">Gentium Book Basic</a>, which was designed by Victor Gaultney. The Gentium Book Basic font family is based on the original Gentium design, but with additional weights. The family comes with a complete regular, bold, italic and bold italic set of fonts.</p>
-<p><span class="smallcaps">The side chapter text</span> is set in <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a>, a humanist sans serif typeface which was designed by Steve Matteson. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.</p>
-<p><span class="smallcaps">The monospaced font</span> used for code samples is <a href="https://github.com/ehamiter/Edlo">Edlo</a>, which I created by modifying a version of Stephen G. Hartke’s <a href="https://www.dafont.com/aurulent-sans-mono.font">Aurulent Sans</a>, which I thought was beautiful, but hazardous for programming because the similarities between zeroes and ohs and ones and els were too close for comfort.</p>
-<p><span class="smallcaps">The snake image</span> on the cover page as well as the favicon was created by <a href="https://thenounproject.com/term/snake/1190118">Bakunetsu Kaito</a> from the Noun Project.</p>
-<p><span class="smallcaps">This book</span> was generated by using <a href="https://github.com/rust-lang/mdBook">mdBook</a>, which is a free, open source command line tool and Rust crate to create books using Markdown (as by the CommonMark specification) files. It’s very similar to Gitbook but written in Rust.</p>
+<p>You can view all of the available styles (below is a sample of the complete output):</p>
+<pre><code>pygmentize -L styles
+</code></pre>
+<pre class="output">
+* emacs:
+    The default style (inspired by Emacs 22).
+* monokai:
+    This style mimics the Monokai color scheme.
+* vim:
+    Styles somewhat like vim 7.0
+* xcode:
+    Style similar to the Xcode default colouring theme.
+* solarized-dark:
+    The solarized style, dark.
+* solarized-light:
+    The solarized style, light.
+</pre>
+<h1><a class="header" href="#interactiveshellpdb" id="interactiveshellpdb">InteractiveShell.pdb</a></h1>
+<pre class="output">
+## Automatically call the pdb debugger after every exception.
+#  Default: False
+</pre>
+<p>The <a href="https://docs.python.org/3/library/pdb.html">Python debugger</a> can be a super useful tool for stepping through code and examining what’s going on. Normally to use it, you import it and then set the trace:</p>
+<pre><code>import pdb; pdb.set_trace()
+</code></pre>
+<p>Things got a little more simple with the advent of <a href="https://www.python.org/dev/peps/pep-0553/">PEP 553</a> which introduced <code>breakpoint()</code> to Python 3.7. You can accomplish the above with simply:</p>
+<pre><code>breakpoint()
+</code></pre>
+<p>To invoke this automatically in your shell if you hit an exception, you can set it like so:</p>
+<pre><code>c.InteractiveShell.pdb = True
+</code></pre>
+<p>Now, whenever your code hits an exception, you will automatically be dropped into the debugger.</p>
 
                     </main>
 
