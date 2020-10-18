@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/autoformatter.html"><strong aria-hidden="true">8.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="config/autorestore.html"><strong aria-hidden="true">8.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="config/colors.html"><strong aria-hidden="true">8.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="config/confirm_exit.html"><strong aria-hidden="true">8.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="config/editor.html"><strong aria-hidden="true">8.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="config/highlighting_style.html"><strong aria-hidden="true">8.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="config/pdb.html"><strong aria-hidden="true">8.9.</strong> pdb</a></li><li class="chapter-item expanded "><a href="config/explore.html"><strong aria-hidden="true">8.10.</strong> Explore</a></li></ol></li><li class="chapter-item expanded "><a href="magic/commands.html"><strong aria-hidden="true">9.</strong> Magic Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="magic/line.html"><strong aria-hidden="true">9.1.</strong> Line Magic</a></li><li class="chapter-item expanded "><a href="magic/cell.html"><strong aria-hidden="true">9.2.</strong> Cell Magic</a></li></ol></li><li class="chapter-item expanded "><a href="colophon.html">Colophon</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="why-bother.html"><strong aria-hidden="true">2.</strong> Why bother?</a></li><li class="chapter-item expanded "><a href="audience.html"><strong aria-hidden="true">3.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">4.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">5.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">6.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">7.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">8.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">9.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/autoformatter.html"><strong aria-hidden="true">9.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="config/autorestore.html"><strong aria-hidden="true">9.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">9.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="config/colors.html"><strong aria-hidden="true">9.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="config/confirm_exit.html"><strong aria-hidden="true">9.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="config/editor.html"><strong aria-hidden="true">9.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">9.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="config/highlighting_style.html"><strong aria-hidden="true">9.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="config/pdb.html"><strong aria-hidden="true">9.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><a href="magic/commands.html"><strong aria-hidden="true">10.</strong> Magic Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="magic/timeit.html"><strong aria-hidden="true">10.1.</strong> timeit</a></li></ol></li><li class="chapter-item expanded "><a href="colophon.html">Colophon</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -185,33 +185,57 @@ Easy to use, high performance tools for <a href="https://ipyparallel.readthedocs
 </blockquote>
 <p>You can see that IPython has a veritable treasure trove of very powerful features. This book won’t be covering <em>any</em> of those.</p>
 <p>Instead, we are going to explore the interactive shell via the command line that one would typically use in conjunction with Python web development, typically when working with a Django / Flask / Tornado / other Python web framework.</p>
+<h1><a class="header" href="#why-bother" id="why-bother">Why bother?</a></h1>
+<blockquote>
+<p>What’s the point of using IPython if it’s not going to be using the Jupyter notebook?</p>
+</blockquote>
+<p>Excellent question. While the <a href="https://ipython.org/notebook.html">Jupyter notebook</a> is a wonderful tool, sometimes it can be overkill. At times, all I want is to quickly pop into a shell, grab an object, and do a little manipulation or testing.</p>
+<blockquote>
+<p>What’s wrong with just using <code>python</code> to open a shell?</p>
+</blockquote>
+<p>Another wonderful question. You’re really good at this. The answer is that there is <em>nothing</em> wrong with using the standard Python shell, but the reason to give IPthon a try is that you get a lot of things for free. Among some of these features are:</p>
+<ul>
+<li>Persistent input history</li>
+<li>Tab completion</li>
+<li>Extensible system of ‘magic’ commands</li>
+<li>A rich configuration system</li>
+<li>Syntax highlighting as you type</li>
+<li>Integration with command line editor</li>
+</ul>
+<p>…and much, much more.</p>
 <h1><a class="header" href="#who-this-book-is-for" id="who-this-book-is-for">Who this book is for</a></h1>
 <p>This is not a “learn how to program” book, nor is it geared toward data visualization or high performance processing that many may use Jupyter for. The audience in question are Python web developers who are comfortable with <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming</a> in a command line environment.</p>
-<p>If the following blurb looks familiar to you, you’re in the right place:</p>
-<pre><code class="language-python">&gt;&gt;&gt; u = User.objects.filter(email__icontains='dev')
+<p>If you’re a Django or Flask developer that will run <code>python manage.py shell</code> or <code>flask shell</code> in order to examine objects and test out bits of code, you’re in the right place. This should look familiar to you:</p>
+<pre class="output">
+>>> u = User.objects.filter(email__icontains='dev')
 
-&gt;&gt;&gt; len(u)
+>>> len(u)
 14
 
-&gt;&gt;&gt; first_dev = u[0]
+>>> first_dev = u[0]
 
-&gt;&gt;&gt; first_dev.is_staff
+>>> first_dev.is_staff
 True
 
-&gt;&gt;&gt; first_dev.username
+>>> first_dev.username
 'samanthasmithdev'
 
-&gt;&gt;&gt; first_dev.email
+>>> first_dev.email
 'samanthasmithdev@techiecompany.com'
-</code></pre>
-<p>If this leaves you slightly befuddled, the rest may be a bit hard to follow. You can learn more about <a href="https://www.python.org/about/gettingstarted/">the shell and Python here</a>.</p>
+</pre>
+<p>If this leaves you slightly befuddled, the rest may be a bit hard to follow. You can learn more about <a href="https://www.python.org/about/gettingstarted/">Python and the shell here</a>.</p>
 <h1><a class="header" href="#how-to-read-this-book" id="how-to-read-this-book">How to read this book</a></h1>
-<p>This book was generated using a Rust program called <a href="https://github.com/rust-lang/mdBook">mdBook</a> that has several goodies baked in. It handles the layout and responsive design so my focus can lie on the content of this book instead of the architecture of the site. You can:</p>
+<p>This book was generated using a Rust program called <a href="https://github.com/rust-lang/mdBook">mdBook</a> that has several goodies baked in. It handles the layout and responsive design so my focus can lie on the content of this book instead of the architecture of the site. I also use footnotes from time to time. <sup class="footnote-reference"><a href="how.html#fn1" id="ref1">1</a></sup></p>
+<p>As far as the features go, you can:</p>
 <p>…toggle the chapter menu by clicking on the hamburger menu: <i class="fa fa-fw fa-bars"></i></p>
 <p>…change the theme by selecting the paintbrush icon: <i class="fa fa-fw fa-paint-brush"></i></p>
 <p>…search the book using the magnifying glass: <i class="fa fa-fw fa-search"></i></p>
 <p>…turn pages by clicking the left and right angles:<i class="fa fa-fw fa-angle-left"></i> <i class="fa fa-fw fa-angle-right"></i></p>
 <p>You can also navigate by using your keyboard’s left and right arrows.</p>
+<p>A warning symbol will appear by a section that has potentially tricky parts that require close attention:</p>
+<blockquote>
+<p><i class="fa fa-fw fa-warning"></i> Don’t run on wet tiled surfaces.</p>
+</blockquote>
 <p>For code snippets, you can copy the input by clicking on the copy symbol:</p>
 <pre><code>ipython --version
 </code></pre>
@@ -219,12 +243,14 @@ True
 <pre class="output">
 7.18.1
 </pre>
+<hr />
+<p><sup class="footnote-definition" id="fn1">1. Like this one.<a href="how.html#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup></p>
 <h1><a class="header" href="#this-book-is-not-free" id="this-book-is-not-free">This book is not free</a></h1>
 <p>Well… it’s free as in freedom, but not free as in beer. Although you don’t necessarily have to spend money to buy it.</p>
 <p><em>Huh?</em></p>
 <p>You are most welcome (and encouraged) to <a href="https://buymeacoffee.com/ehamiter">buy me a coffee / beer / pizza</a> to show your appreciation if you enjoy this book and you get something out of it— you learn some new tricks, speed up your efficiency, save your company tens of millions of dollars, and so forth.</p>
-<p>If you’re strapped for cash, waiting for your Bitcoins to mature, or what have you— you can make this book better. I’m a big believer in open source software, and this book is no different. Spot a typo? See something grievously wrong? Make a pull request, and make a difference for the next person who reads this book. Click the GitHub icon <i class="fa fa-github"></i> on the top right of the page to visit the repo.</p>
-<p>If you don’t want to part with your hard-earned money, and have no desire to alter the content via pull requests, then tell someone about it. Mention this book to a friend or colleague. Post a link to a forum you frequently visit. Tweet a link to it. The more people that see it, the better— for everyone. More eyes on the content ensures typos are caught, wrongs are righted, and knowledge is shared.</p>
+<p>If you’re strapped for cash, waiting for your Bitcoins to mature, or what have you— you can make this book better. I’m a big believer in open source software, and this book is no different. Spot a <strike>tpyo</strike> typo? See something grievously wrong? Make a pull request, and make a difference for the next person who reads this book. Click the GitHub icon <i class="fa fa-github"></i> on the top right of the page to visit the repo.</p>
+<p>If you don’t want to part with your hard-earned money, and have no desire to alter the content via pull requests, then tell someone about it. Mention this book to a friend, colleague, or enemy. Post a link to a forum you frequently visit. Tweet a link to it. The more people that see it, the better— for everyone. More eyes on the content ensures mistakes are caught, wrongs are righted, and knowledge is shared. Python programming efficiency soars, the global economy recovers, and cats and dogs live together in harmony.</p>
 <h1><a class="header" href="#prerequisites" id="prerequisites">Prerequisites</a></h1>
 <ul>
 <li>You are a curious learner, and want to improve your programming skills.</li>
@@ -253,7 +279,7 @@ IPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.
 In [1]:
 </pre>
 <h1><a class="header" href="#profiles" id="profiles">Profiles</a></h1>
-<p>IPython has support for multiple profiles. This is handy if you are working on different projects and want to tweak some behaviors, or test out new settings without changing how IPython will behave globally. By default, IPython will always run the <code>default</code> profile. Once you specify a new profile to create, new configuration files will be created. To create a new profile named <code>zagnut</code>, enter: <sup><a href="profiles.html#fn1" id="ref1">1</a></sup></p>
+<p>IPython has support for multiple profiles. This is handy if you are working on different projects and want to tweak some behaviors, or test out new settings without changing how IPython will behave globally. By default, IPython will always run the <code>default</code> profile. Once you specify a new profile to create, new configuration files will be created. To create a new profile named <code>zagnut</code>, enter: <sup class="footnote-reference"><a href="profiles.html#fn2" id="ref2">2</a></sup></p>
 <pre><code>ipython profile create zagnut
 </code></pre>
 <pre class="output">
@@ -277,8 +303,15 @@ IPython profile: zagnut
 
 In [1]:
 </pre>
+<p>If you are a Django developer and want to use an IPython profile in conjunction with the Django shell, you can do it by using the wonderful django-extensions package’s <a href="https://django-extensions.readthedocs.io/en/latest/shell_plus.html"><code>shell_plus</code></a> extension (which gives you some niceties like auto importing your models), and pass the profile name in as:</p>
+<pre><code>python manage.py shell_plus --ipython -- --profile=zagnut
+</code></pre>
+<p><i class="fa fa-fw fa-warning"></i> Note that there is a separate double dash (<code>--</code>) before the <code>--profile</code>.</p>
+<p>Since this is kind of a long command to type each time you want to pop into a shell, I alias mine to something much simpler to remember: <strong>P</strong>ython <strong>m</strong>anage <strong>s</strong>hell_plus:</p>
+<pre><code>alias pms='python manage.py shell_plus --ipython -- --profile=zagnut'
+</code></pre>
 <hr />
-<p><sup id="fn1">1. We all remember <a href="https://www.youtube.com/watch?v=IwV90NvsmAI&amp;t=0m20s">the candy bar of choice for Beetlejuice</a>, right? No? Just me?<a href="profiles.html#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup></p>
+<p><sup class="footnote-definition" id="fn2">2. We all remember <a href="https://www.youtube.com/watch?v=IwV90NvsmAI&amp;t=0m20s">the candy bar of choice for Beetlejuice</a>, right? No? Just me?<a href="profiles.html#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup></p>
 <h1><a class="header" href="#ipython_configpy" id="ipython_configpy">ipython_config.py</a></h1>
 <p>Once you have created your profile, open up its configuration file in your favorite text editor:</p>
 <pre><code>ipython locate profile zagnut
@@ -288,7 +321,7 @@ In [1]:
 </pre>
 <pre><code>&quot;${EDITOR:-vi}&quot; ~/.ipython/profile_zagnut/ipython_config.py
 </code></pre>
-<p>This file is over 1,000 lines of code, so there’s a lot to take in— we’ll focus on a handful of things that are practical and help tailor your IPython experience.</p>
+<p>This file is over 1,000 lines of code, so there’s a lot to take in— we’ll focus on a handful of things that are practical and help tailor your IPython experience. After we’ve explored the settings in this chapter, I encourage you to dive deep into the file for other settings. Experiment with logging, interacting with <code>matplotlib</code>, <code>numpy</code>, and <a href="https://jedi.readthedocs.io/en/latest/">Jedi integration</a> if those are in your wheelhouse.</p>
 <h1><a class="header" href="#terminalinteractiveshellautoformatter" id="terminalinteractiveshellautoformatter">TerminalInteractiveShell.autoformatter</a></h1>
 <pre class="output">
 ## Autoformatter to reformat Terminal code. Can be `'black'` or `None`
@@ -299,25 +332,27 @@ In [1]:
 </code></pre>
 <p>Enabling this can turn something like this:</p>
 <pre class="output">
-In [1]: prices = {
-   ...: 'apple': 0.40, 'banana': 0.50
-   ...: }
-   ...: my_purchase = {
-   ...:     'apple': 1,
-   ...:     'banana': 6}
-   ...: grocery_bill = sum(
-   ...: prices[fruit] * my_purchase[fruit]
-   ...:                    for fruit in my_purchase
-   ...:                    )
-   ...: print('I owe the grocer $%.2f' % grocery_bill)
+In [1]: cost = {
+    ...: 'apple': 0.40,
+    ...: 'banana': 0.50}
+    ...: bought = {
+    ...:     'apple': 1,
+    ...:     'banana': 6}
+    ...: bill = sum(
+    ...: cost[fruit] * bought[fruit]
+    ...:                    for fruit in bought
+    ...:                    )
+    ...: print(
+    ...: 'I owe the grocer $%.2f' % bill
+    ...: )
 I owe the grocer $3.40
 </pre>
 <p>…into this:</p>
 <pre class="output">
-In [1]: prices = {"apple": 0.40, "banana": 0.50}
-   ...: my_purchase = {"apple": 1, "banana": 6}
-   ...: grocery_bill = sum(prices[fruit] * my_purchase[fruit] for fruit in my_purchase)
-   ...: print("I owe the grocer $%.2f" % grocery_bill)
+In [1]: cost = {"apple": 0.40, "banana": 0.50}
+    ...: bought = {"apple": 1, "banana": 6}
+    ...: bill = sum(cost[fruit] * bought[fruit] for fruit in bought)
+    ...: print("I owe the grocer $%.2f" % bill)
 I owe the grocer $3.40
 </pre>
 <p>It’s very handy for cleaning up your code style, especially if the project you’re working on uses <code>black</code>. In order for this to work, you need to have <code>black</code> installed in your environment:</p>
@@ -337,14 +372,14 @@ I owe the grocer $3.40
 ## The part of the banner to be printed before the profile
 #  Default: "Python 3.8.2 (default, Jul  5 2020, 15:01:50) \nType 'copyright', 'credits' or 'license' for more information\nIPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.\n"
 </pre>
-<p>You can customize the banner that is displayed on startup-- if you’re the kind of person who’s into that kind of thing. You could cut it down to the important bits if you <em>are</em> into the whole brevity thing: <sup><a href="config/banner1.html#fn2" id="ref2">2</a></sup></p>
+<p>You can customize the banner that is displayed on startup-- if you’re the kind of person who’s into that kind of thing. You could cut it down to the important bits if you <em>are</em> into the whole brevity thing: <sup class="footnote-reference"><a href="config/banner1.html#fn3" id="ref3">3</a></sup></p>
 <pre><code>c.InteractiveShell.banner1 = &quot;Python 3.8.2 -- IPython 7.18.1\n&quot;
 </code></pre>
 <p>…or eliminate it entirely:</p>
 <pre><code>c.TerminalIPythonApp.display_banner = False
 </code></pre>
 <hr />
-<p><sup id="fn2">2. <a href="https://www.youtube.com/watch?v=pWdd6_ZxX8c">Yeah? Well, you know, that’s just like, uh… your opinion, man. </a><a href="config/banner1.html#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup></p>
+<p><sup class="footnote-definition" id="fn3">3. <a href="https://www.youtube.com/watch?v=pWdd6_ZxX8c">Yeah? Well, you know, that’s just like, uh… your opinion, man. </a><a href="config/banner1.html#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup></p>
 <h1><a class="header" href="#interactiveshellcolors" id="interactiveshellcolors">InteractiveShell.colors</a></h1>
 <pre class="output">
 ## Set the color scheme (NoColor, Neutral, Linux, or LightBG).
@@ -369,27 +404,28 @@ I owe the grocer $3.40
 ## Set the editor used by IPython (default to $EDITOR/vi/notepad).
 #  Default: 'subl'
 </pre>
-<p>The default listed above is <code>subl</code> for me because I use Sublime Text as my default editor. For you, it may be <code>vim</code>, <code>vscode</code>, <code>emacs</code>, <code>nano</code>, or any number of text editors. For my particular case, as we will explore later, there is an <code>edit</code> command in IPython, which lets you …well, edit things. For whatever reason, Sublime Text does not work well with the <code>edit</code> command. <sup><a href="config/editor.html#fn3" id="ref3">3</a></sup> Because of this, I want to set IPython’s editor of choice to something else– <code>vim</code>, in my case:</p>
+<p>The default listed above is <code>subl</code> for me because I use Sublime Text as my default editor. For you, it may be <code>vim</code>, <code>vscode</code>, <code>emacs</code>, <code>nano</code>, or any number of text editors. For my particular case, as we will explore later, there is an <code>%edit</code> magic command in IPython, which lets you …well, edit things. For whatever reason, Sublime Text does not work well with the <code>%edit</code> command. <sup class="footnote-reference"><a href="config/editor.html#fn4" id="ref4">4</a></sup>Because of this, I want to set IPython’s editor of choice to something else– <code>vim</code>, in my case: <sup class="footnote-reference"><a class="superscript" href="config/editor.html#fn5" id="ref5">5</a></sup></p>
 <pre><code>c.TerminalInteractiveShell.editor = 'vim'
 </code></pre>
 <hr />
-<p><sup id="fn3">3. Once <code>edit</code> is invoked, a temporary file is created. In Sublime’s case, it immediately executes the code instead of waiting for the save signal to execute it, so there is never a chance of actually editing the file. <a href="config/editor.html#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup></p>
+<p><sup class="footnote-definition" id="fn4">4. Once <code>%edit</code> is invoked, a temporary file is created. In Sublime’s case, it immediately executes the code instead of waiting for the save signal to execute it, so there is never a chance of actually editing the file. <a href="config/editor.html#ref4" title="Jump back to footnote 4 in the text.">↩</a></sup><br>
+<sup class="footnote-definition" id="fn5">5. A thousand apologies if I angered any Emacs wizards. I use Vim here because I know the basics, and watching me try to use Emacs is just an embarrassing spectacle that no one should have to witness.<a href="config/editor.html#ref5" title="Jump back to footnote 5 in the text.">↩</a></sup></p>
 <h1><a class="header" href="#interactiveshellappexec_lines" id="interactiveshellappexec_lines">InteractiveShellApp.exec_lines</a></h1>
 <pre class="output">
 ## lines of code to run at IPython startup.
 #  Default: []
 </pre>
-<p><code>InteractiveShellApp.exec_lines</code> is a list that will execute on IPython’s startup. You could put in</p>
+<p><code>InteractiveShellApp.exec_lines</code> is a list that will execute on IPython’s startup. If you wanted to see <em>The Zen of Python</em> by Tim Peters everytime you fired up the shell, you could put in:</p>
 <pre><code>c.InteractiveShellApp.exec_lines = ['import this']
 </code></pre>
-<p>if you wanted to see <em>The Zen of Python</em> by Tim Peters everytime you fired up the shell. That might not be totally practical, but it could be inspiring. An extension that we will talk more about later is the <code>autoreload</code> extension. It’s pretty nice to have this available without having to manually load it— it lets you change source code in an editor while the shell is still open, and it will reload its value without requiring you to have to restart your session. <sup><a href="config/exec_lines.html#fn4" id="ref4">4</a></sup></p>
+<p>That might not be totally practical, but it could be inspiring. An extension that we will talk more about later is the <code>autoreload</code> extension. It’s pretty nice to have this available without having to manually load it— it lets you change source code in an editor while the shell is still open, and it will reload its value without requiring you to have to restart your session. <sup class="footnote-reference"><a href="config/exec_lines.html#fn6" id="ref6">6</a></sup></p>
 <p>You can enable it to run by default with these lines:</p>
 <pre><code>c.InteractiveShellApp.exec_lines = []
 c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
 c.InteractiveShellApp.exec_lines.append('%autoreload 2')    
 </code></pre>
 <hr />
-<p><sup id="fn4">4. As with anything seemingly too good to be true, <a href="https://ipython.org/ipython-doc/stable/config/extensions/autoreload.html#caveats">it does have its caveats</a> and doesn’t work for every case. It works most of the time, though, and can save you a lot of time.<a href="config/exec_lines.html#ref4" title="Jump back to footnote 4 in the text.">↩</a></sup></p>
+<p><sup class="footnote-definition" id="fn6">6. As with anything seemingly too good to be true, <a href="https://ipython.org/ipython-doc/stable/config/extensions/autoreload.html#caveats">it does have its caveats</a> and doesn’t work for every case. It works most of the time, though, and can save you a lot of time.<a href="config/exec_lines.html#ref6" title="Jump back to footnote 6 in the text.">↩</a></sup></p>
 <h1><a class="header" href="#highlighting_style" id="highlighting_style">highlighting_style</a></h1>
 <pre class="output">
 ## The name or class of a Pygments style to use for syntax highlighting. To see
@@ -434,39 +470,68 @@ c.InteractiveShellApp.exec_lines.append('%autoreload 2')
 <pre><code>c.InteractiveShell.pdb = True
 </code></pre>
 <p>Now, whenever your code hits an exception, you will automatically be dropped into the debugger.</p>
-<h1><a class="header" href="#explore" id="explore">Explore</a></h1>
-<p>We’ve only touched on a handful of settings. There are many more to try out and may make your workflow more streamlined. Experiment with settings for logging, for interacting with <code>matplotlib</code>, <code>numpy</code>, and <a href="https://jedi.readthedocs.io/en/latest/">Jedi integration</a>.</p>
 <h1><a class="header" href="#magic-commands" id="magic-commands">Magic Commands</a></h1>
-<p>I would be hard-pressed to give a better description of what magic commands are and the difference between line and cell magic compared to the official documentation, so here it is, straight from the horse’s mouth, by invoking:</p>
 <pre><code>%magic
 </code></pre>
 <pre class="output">
 The magic function system provides a series of functions which allow you to
 control the behavior of IPython itself, plus a lot of system-type
-features. There are two kinds of magics, line-oriented and cell-oriented.
-
-Line magics are prefixed with the % character and work much like OS
-command-line calls: they get as an argument the rest of the line, where
-arguments are passed without parentheses or quotes.  For example, this will
-time the given statement::
-
-        %timeit range(1000)
-
-Cell magics are prefixed with a double %%, and they are functions that get as
-an argument not only the rest of the line, but also the lines below it in a
-separate argument.  These magics are called with two arguments: the rest of the
-call line and the body of the cell, consisting of the lines below the first.
-For example::
-
-        %%timeit x = numpy.random.randn((100, 100))
-        numpy.linalg.svd(x)
-
-will time the execution of the numpy svd routine, running the assignment of x
-as part of the setup phase, which is not timed.
+features.
 </pre>
-<p>Let’s explore some of these magic commands.</p>
-<h1><a class="header" href="#line-magic" id="line-magic">Line Magic</a></h1>
-<h1><a class="header" href="#cell-magic" id="cell-magic">Cell Magic</a></h1>
+<p>There are two kinds of magics: line and cell.</p>
+<blockquote>
+<p>Line magics are prefixed with the <code>%</code> character and work much like OS
+command-line calls: they get as an argument the rest of the line, where
+arguments are passed without parentheses or quotes.</p>
+</blockquote>
+<blockquote>
+<p>Cell magics are prefixed with a double <code>%%</code>, and they are functions that get as an argument not only the rest of the line, but also the lines below it in a
+separate argument.  These magics are called with two arguments: the rest of the
+call line and the body of the cell, consisting of the lines below the first.</p>
+</blockquote>
+<p>Magic commands can be used <em>without</em> typing the <code>%</code> sign by default— this behavior is altered by running the magic command <code>%automagic</code>, which toggles the necessity of the preceding <code>%</code> character.</p>
+<p><i class="fa fa-fw fa-warning"></i> Keep in mind that if you create a variable that collides with an automagic command, using your variable (without the explicit <code>%</code> prefix) will override the magic command’s reference, e.g.</p>
+<pre class="output">
+In [1]: automagic
+
+Automagic is OFF, % prefix IS needed for line magics.
+
+In [2]: %automagic
+
+Automagic is ON, % prefix IS NOT needed for line magics.
+
+In [3]: automagic = print
+
+In [4]: automagic
+Out[4]: &lt;function print&gt;
+
+In [5]: %automagic
+
+Automagic is OFF, % prefix IS needed for line magics.
+</pre>
+<p>Let’s look at some specific examples of these different types of magic commands.</p>
+<h1><a class="header" href="#timeit" id="timeit">timeit</a></h1>
+<p><code>%timeit</code> is a commonly used magic command used for gauging the efficiency and speed of a function. Suppose we have two methods that return the same result, but we’re not exactly sure which one is more efficient (which is especially helpful if you’re not super familiar with <a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O notation</a>).</p>
+<pre class="output">
+In [1]: def power(x):
+   ...:     return pow(x, 2)
+
+In [2]: power(2)
+Out[2]: 4
+
+In [3]: def power_alternative(x):
+   ...:     return x * x
+
+In [4]: power_alternative(2)
+Out[4]: 4
+
+In [5]: %timeit power(2)
+479 ns ± 15.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+In [6]: %timeit power_alternative(2)
+130 ns ± 0.217 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+</pre>
+<p>In this example we can see that the <code>power_alternative()</code> is much faster than  the <code>power()</code> function that uses Python’s builtin <code>pow()</code> function.</p>
 <h1><a class="header" href="#colophon" id="colophon">Colophon</a></h1>
 <p><span class="smallcaps">The body text</span> of <em>IPython for Web Devs</em> is set in <a href="https://fonts.google.com/specimen/Gentium+Basic">Gentium Book Basic</a>, which was designed by Victor Gaultney. The Gentium Book Basic font family is based on the original Gentium design, but with additional weights. The family comes with a complete regular, bold, italic and bold italic set of fonts.</p>
 <p><span class="smallcaps">The side chapter text</span> is set in <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a>, a humanist sans serif typeface which was designed by Steve Matteson. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.</p>

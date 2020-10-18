@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="audience.html" class="active"><strong aria-hidden="true">2.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">3.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">4.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">5.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">6.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">7.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">8.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/autoformatter.html"><strong aria-hidden="true">8.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="config/autorestore.html"><strong aria-hidden="true">8.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">8.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="config/colors.html"><strong aria-hidden="true">8.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="config/confirm_exit.html"><strong aria-hidden="true">8.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="config/editor.html"><strong aria-hidden="true">8.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">8.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="config/highlighting_style.html"><strong aria-hidden="true">8.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="config/pdb.html"><strong aria-hidden="true">8.9.</strong> pdb</a></li><li class="chapter-item expanded "><a href="config/explore.html"><strong aria-hidden="true">8.10.</strong> Explore</a></li></ol></li><li class="chapter-item expanded "><a href="magic/commands.html"><strong aria-hidden="true">9.</strong> Magic Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="magic/line.html"><strong aria-hidden="true">9.1.</strong> Line Magic</a></li><li class="chapter-item expanded "><a href="magic/cell.html"><strong aria-hidden="true">9.2.</strong> Cell Magic</a></li></ol></li><li class="chapter-item expanded "><a href="colophon.html">Colophon</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="why-bother.html"><strong aria-hidden="true">2.</strong> Why bother?</a></li><li class="chapter-item expanded "><a href="audience.html" class="active"><strong aria-hidden="true">3.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="how.html"><strong aria-hidden="true">4.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="not-free.html"><strong aria-hidden="true">5.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="prerequisites.html"><strong aria-hidden="true">6.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">7.</strong> Setup</a></li><li class="chapter-item expanded "><a href="profiles.html"><strong aria-hidden="true">8.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="ipython-config.html"><strong aria-hidden="true">9.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="config/autoformatter.html"><strong aria-hidden="true">9.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="config/autorestore.html"><strong aria-hidden="true">9.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="config/banner1.html"><strong aria-hidden="true">9.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="config/colors.html"><strong aria-hidden="true">9.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="config/confirm_exit.html"><strong aria-hidden="true">9.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="config/editor.html"><strong aria-hidden="true">9.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="config/exec_lines.html"><strong aria-hidden="true">9.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="config/highlighting_style.html"><strong aria-hidden="true">9.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="config/pdb.html"><strong aria-hidden="true">9.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><a href="magic/commands.html"><strong aria-hidden="true">10.</strong> Magic Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="magic/timeit.html"><strong aria-hidden="true">10.1.</strong> timeit</a></li></ol></li><li class="chapter-item expanded "><a href="colophon.html">Colophon</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -171,31 +171,32 @@
                     <main>
                         <h1><a class="header" href="#who-this-book-is-for" id="who-this-book-is-for">Who this book is for</a></h1>
 <p>This is not a “learn how to program” book, nor is it geared toward data visualization or high performance processing that many may use Jupyter for. The audience in question are Python web developers who are comfortable with <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming</a> in a command line environment.</p>
-<p>If the following blurb looks familiar to you, you’re in the right place:</p>
-<pre><code class="language-python">&gt;&gt;&gt; u = User.objects.filter(email__icontains='dev')
+<p>If you’re a Django or Flask developer that will run <code>python manage.py shell</code> or <code>flask shell</code> in order to examine objects and test out bits of code, you’re in the right place. This should look familiar to you:</p>
+<pre class="output">
+>>> u = User.objects.filter(email__icontains='dev')
 
-&gt;&gt;&gt; len(u)
+>>> len(u)
 14
 
-&gt;&gt;&gt; first_dev = u[0]
+>>> first_dev = u[0]
 
-&gt;&gt;&gt; first_dev.is_staff
+>>> first_dev.is_staff
 True
 
-&gt;&gt;&gt; first_dev.username
+>>> first_dev.username
 'samanthasmithdev'
 
-&gt;&gt;&gt; first_dev.email
+>>> first_dev.email
 'samanthasmithdev@techiecompany.com'
-</code></pre>
-<p>If this leaves you slightly befuddled, the rest may be a bit hard to follow. You can learn more about <a href="https://www.python.org/about/gettingstarted/">the shell and Python here</a>.</p>
+</pre>
+<p>If this leaves you slightly befuddled, the rest may be a bit hard to follow. You can learn more about <a href="https://www.python.org/about/gettingstarted/">Python and the shell here</a>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="why-bother.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
@@ -213,7 +214,7 @@ True
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="why-bother.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
