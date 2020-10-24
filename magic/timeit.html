@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../why-bother.html"><strong aria-hidden="true">2.</strong> Why bother?</a></li><li class="chapter-item expanded "><a href="../audience.html"><strong aria-hidden="true">3.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="../how.html"><strong aria-hidden="true">4.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="../not-free.html"><strong aria-hidden="true">5.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="../prerequisites.html"><strong aria-hidden="true">6.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="../setup.html"><strong aria-hidden="true">7.</strong> Setup</a></li><li class="chapter-item expanded "><a href="../profiles.html"><strong aria-hidden="true">8.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="../ipython-config.html"><strong aria-hidden="true">9.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../config/autoformatter.html"><strong aria-hidden="true">9.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="../config/autorestore.html"><strong aria-hidden="true">9.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="../config/banner1.html"><strong aria-hidden="true">9.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="../config/colors.html"><strong aria-hidden="true">9.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="../config/confirm_exit.html"><strong aria-hidden="true">9.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="../config/editor.html"><strong aria-hidden="true">9.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="../config/exec_lines.html"><strong aria-hidden="true">9.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="../config/highlighting_style.html"><strong aria-hidden="true">9.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="../config/pdb.html"><strong aria-hidden="true">9.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><a href="../magic/commands.html"><strong aria-hidden="true">10.</strong> Magic Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../magic/timeit.html" class="active"><strong aria-hidden="true">10.1.</strong> timeit</a></li></ol></li><li class="chapter-item expanded "><a href="../colophon.html">Colophon</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../why-bother.html"><strong aria-hidden="true">2.</strong> Why bother?</a></li><li class="chapter-item expanded "><a href="../audience.html"><strong aria-hidden="true">3.</strong> Who this book is for</a></li><li class="chapter-item expanded "><a href="../how.html"><strong aria-hidden="true">4.</strong> How to read this book</a></li><li class="chapter-item expanded "><a href="../not-free.html"><strong aria-hidden="true">5.</strong> This book is not free</a></li><li class="chapter-item expanded "><a href="../prerequisites.html"><strong aria-hidden="true">6.</strong> Prerequisites</a></li><li class="chapter-item expanded "><a href="../setup.html"><strong aria-hidden="true">7.</strong> Setup</a></li><li class="chapter-item expanded "><a href="../profiles.html"><strong aria-hidden="true">8.</strong> Profiles</a></li><li class="chapter-item expanded "><a href="../ipython-config.html"><strong aria-hidden="true">9.</strong> ipython_config.py</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../config/autoformatter.html"><strong aria-hidden="true">9.1.</strong> autoformatter</a></li><li class="chapter-item expanded "><a href="../config/autorestore.html"><strong aria-hidden="true">9.2.</strong> autorestore</a></li><li class="chapter-item expanded "><a href="../config/banner1.html"><strong aria-hidden="true">9.3.</strong> banner1</a></li><li class="chapter-item expanded "><a href="../config/colors.html"><strong aria-hidden="true">9.4.</strong> colors</a></li><li class="chapter-item expanded "><a href="../config/confirm_exit.html"><strong aria-hidden="true">9.5.</strong> confirm_exit</a></li><li class="chapter-item expanded "><a href="../config/editor.html"><strong aria-hidden="true">9.6.</strong> editor</a></li><li class="chapter-item expanded "><a href="../config/exec_lines.html"><strong aria-hidden="true">9.7.</strong> exec_lines</a></li><li class="chapter-item expanded "><a href="../config/highlighting_style.html"><strong aria-hidden="true">9.8.</strong> highlighting_style</a></li><li class="chapter-item expanded "><a href="../config/pdb.html"><strong aria-hidden="true">9.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><a href="../magic-commands.html"><strong aria-hidden="true">10.</strong> Magic Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../magic/timeit.html" class="active"><strong aria-hidden="true">10.1.</strong> timeit</a></li></ol></li><li class="chapter-item expanded "><a href="../colophon.html">Colophon</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -172,32 +172,42 @@
                         <h1><a class="header" href="#timeit" id="timeit">timeit</a></h1>
 <p><code>%timeit</code> is a commonly used magic command used for gauging the efficiency and speed of a function. Suppose we have two methods that return the same result, but we’re not exactly sure which one is more efficient (which is especially helpful if you’re not super familiar with <a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O notation</a>).</p>
 <pre class="output">
-In [1]: def power(x):
+In [1]: def square(x):
    ...:     return pow(x, 2)
 
-In [2]: power(2)
+In [2]: square(2)
 Out[2]: 4
 
-In [3]: def power_alternative(x):
+In [3]: def square_alternative(x):
    ...:     return x * x
 
-In [4]: power_alternative(2)
+In [4]: square_alternative(2)
 Out[4]: 4
 
-In [5]: %timeit power(2)
+In [5]: %timeit square(2)
 479 ns ± 15.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
-In [6]: %timeit power_alternative(2)
+In [6]: %timeit square_alternative(2)
 130 ns ± 0.217 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </pre>
-<p>In this example we can see that the <code>power_alternative()</code> is much faster than  the <code>power()</code> function that uses Python’s builtin <code>pow()</code> function.</p>
+<p>In this example we can see that the <code>square_alternative()</code> is much faster than  the <code>square()</code> function that uses Python’s builtin <code>pow()</code> function.</p>
+<p>We can also use cell magic to only time certain aspects of a function if it requires some initial setup. Suppose we want to run the <code>square_alternative</code> function on a number that will be caluculated, but we don’t want to include the initial calculation of <code>x</code>. We can do this using two <code>%</code> symbols, so it only times the last line:</p>
+<pre class="output">
+In [7]: import math
+
+In [8]: %%timeit x = math.pi * math.tau
+   ...: square_alternative(x)
+   ...:
+   ...:
+132 ns ± 1.54 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+</pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../magic/commands.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../magic-commands.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
@@ -215,7 +225,7 @@ In [6]: %timeit power_alternative(2)
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../magic/commands.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../magic-commands.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
