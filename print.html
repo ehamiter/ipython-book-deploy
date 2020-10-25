@@ -194,14 +194,14 @@ Easy to use, high performance tools for <a href="https://ipyparallel.readthedocs
 <blockquote>
 <p>What’s wrong with just using <code>python</code> to open a shell?</p>
 </blockquote>
-<p>Another wonderful question. You’re really good at this. The answer is that there is <em>nothing</em> wrong with using the standard Python shell, but the reason to give IPthon a try is that you get a lot of things for free. Among some of these features are:</p>
+<p>Another wonderful question. You’re really good at this. The answer is that there is <em>nothing</em> wrong with using the standard Python shell, but the reason to give IPython a try is that you get a lot of things for free. Among some of these features are:</p>
 <ul>
 <li>Persistent input history</li>
 <li>Tab completion</li>
 <li>Extensible system of ‘magic’ commands</li>
 <li>A rich configuration system</li>
 <li>Syntax highlighting as you type</li>
-<li>Integration with command line editor</li>
+<li>Integration with a command line editor</li>
 </ul>
 <p>…and much, much more.</p>
 <h1><a class="header" href="#who-this-book-is-for" id="who-this-book-is-for">Who this book is for</a></h1>
@@ -382,7 +382,7 @@ I owe the grocer $3.40
 ## The part of the banner to be printed before the profile
 #  Default: "Python 3.8.2 (default, Jul  5 2020, 15:01:50) \nType 'copyright', 'credits' or 'license' for more information\nIPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.\n"
 </pre>
-<p>You can customize the banner that is displayed on startup-- if you’re the kind of person who’s into that kind of thing. You could cut it down to the important bits if you <em>are</em> into the whole brevity thing: <sup class="footnote-reference"><a href="config/banner1.html#fn3" id="ref3">3</a></sup></p>
+<p>You can customize the banner that is displayed on startup-- if you’re the kind of person who likes to tweak every customizable aspect of a system. You could cut it down to the important bits if you <em>are</em> into the whole brevity thing: <sup class="footnote-reference"><a href="config/banner1.html#fn3" id="ref3">3</a></sup></p>
 <pre><code>c.InteractiveShell.banner1 = &quot;Python 3.8.2 -- IPython 7.18.1\n&quot;
 </code></pre>
 <p>…or eliminate it entirely:</p>
@@ -398,6 +398,9 @@ I owe the grocer $3.40
 </pre>
 <p>You can select from a few color schemes— I use a dark background for my terminal so the default <code>Neutral</code> works for me, but try out <code>LightBG</code> if you use a light background color, or <code>Linux</code> if you’re really into Linux, or <code>NoColor</code> if you hate rainbows and happiness.</p>
 <pre><code>c.InteractiveShell.colors = 'LightBG'
+</code></pre>
+<p>You can also change this on-the-fly in the shell by invoking the magic command <code>%colors</code>:</p>
+<pre><code>%colors Linux
 </code></pre>
 <h1><a class="header" href="#confirm_exit" id="confirm_exit">confirm_exit</a></h1>
 <pre class="output">
