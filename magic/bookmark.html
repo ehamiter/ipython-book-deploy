@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>bookmark - IPython for Web Devs</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../ipython-for-web-devs.html">IPython for Web Devs</a></li><li class="chapter-item "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="../why-bother.html"><strong aria-hidden="true">2.</strong> Why bother?</a></li><li class="chapter-item "><a href="../audience.html"><strong aria-hidden="true">3.</strong> Who this book is for</a></li><li class="chapter-item "><a href="../how.html"><strong aria-hidden="true">4.</strong> How to read this book</a></li><li class="chapter-item "><a href="../not-free.html"><strong aria-hidden="true">5.</strong> This book is not free</a></li><li class="chapter-item "><a href="../prerequisites.html"><strong aria-hidden="true">6.</strong> Prerequisites</a></li><li class="chapter-item "><a href="../setup.html"><strong aria-hidden="true">7.</strong> Setup</a></li><li class="chapter-item "><a href="../profiles.html"><strong aria-hidden="true">8.</strong> Profiles</a></li><li class="chapter-item "><a href="../ipython-config.html"><strong aria-hidden="true">9.</strong> ipython_config.py</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../config/autoformatter.html"><strong aria-hidden="true">9.1.</strong> autoformatter</a></li><li class="chapter-item "><a href="../config/autorestore.html"><strong aria-hidden="true">9.2.</strong> autorestore</a></li><li class="chapter-item "><a href="../config/banner1.html"><strong aria-hidden="true">9.3.</strong> banner1</a></li><li class="chapter-item "><a href="../config/colors.html"><strong aria-hidden="true">9.4.</strong> colors</a></li><li class="chapter-item "><a href="../config/confirm_exit.html"><strong aria-hidden="true">9.5.</strong> confirm_exit</a></li><li class="chapter-item "><a href="../config/editor.html"><strong aria-hidden="true">9.6.</strong> editor</a></li><li class="chapter-item "><a href="../config/exec_lines.html"><strong aria-hidden="true">9.7.</strong> exec_lines</a></li><li class="chapter-item "><a href="../config/highlighting_style.html"><strong aria-hidden="true">9.8.</strong> highlighting_style</a></li><li class="chapter-item "><a href="../config/pdb.html"><strong aria-hidden="true">9.9.</strong> pdb</a></li></ol></li><li class="chapter-item expanded "><a href="../magic-commands.html"><strong aria-hidden="true">10.</strong> Magic Commands</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../magic/aimport.html"><strong aria-hidden="true">10.1.</strong> aimport</a></li><li class="chapter-item "><a href="../magic/autoreload.html"><strong aria-hidden="true">10.2.</strong> autoreload</a></li><li class="chapter-item expanded "><a href="../magic/bookmark.html" class="active"><strong aria-hidden="true">10.3.</strong> bookmark</a></li><li class="chapter-item "><div><strong aria-hidden="true">10.4.</strong> cpaste</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.5.</strong> debug</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.6.</strong> dhist</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.7.</strong> dirs</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.8.</strong> doctest_mode</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.9.</strong> edit</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.10.</strong> env</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.11.</strong> history</div></li><li class="chapter-item "><a href="../magic/load.html"><strong aria-hidden="true">10.12.</strong> load</a></li><li class="chapter-item "><div><strong aria-hidden="true">10.13.</strong> load_ext</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.14.</strong> loadpy</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.15.</strong> logoff</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.16.</strong> logon</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.17.</strong> logstart</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.18.</strong> logstate</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.19.</strong> logstop</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.20.</strong> lsmagic</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.21.</strong> macro</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.22.</strong> magic</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.23.</strong> matplotlib</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.24.</strong> notebook</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.25.</strong> page</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.26.</strong> paste</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.27.</strong> pastebin</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.28.</strong> pdb</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.29.</strong> pdef</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.30.</strong> pdoc</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.31.</strong> pfile</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.32.</strong> pinfo</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.33.</strong> pinfo2</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.34.</strong> pprint</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.35.</strong> precision</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.36.</strong> prun</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.37.</strong> psearch</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.38.</strong> psource</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.39.</strong> pycat</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.40.</strong> pylab</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.41.</strong> quickref</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.42.</strong> recall</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.43.</strong> rehashx</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.44.</strong> reload_ext</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.45.</strong> rep</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.46.</strong> rerun</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.47.</strong> reset</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.48.</strong> reset_selective</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.49.</strong> run</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.50.</strong> save</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.51.</strong> sc</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.52.</strong> set_env</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.53.</strong> store</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.54.</strong> sx</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.55.</strong> system</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.56.</strong> tb</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.57.</strong> time</div></li><li class="chapter-item "><a href="../magic/timeit.html"><strong aria-hidden="true">10.58.</strong> timeit</a></li><li class="chapter-item "><div><strong aria-hidden="true">10.59.</strong> unalias</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.60.</strong> unload_ext</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.61.</strong> who</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.62.</strong> who_ls</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.63.</strong> whos</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.64.</strong> xdel</div></li><li class="chapter-item "><div><strong aria-hidden="true">10.65.</strong> xmode</div></li></ol></li><li class="chapter-item "><a href="../colophon.html">Colophon</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <!-- Make the book title only appear if it is *not* the chapter title as well -->
+                    <h1 id="book-title" class="menu-title">IPython for Web Devs</h1>
+                    <script type="text/javascript">
+                        var bookTitleElement = document.getElementById('book-title')
+                        var bookTitle = 'IPython for Web Devs';
+                        var chapterTitle = 'bookmark';
+                        if (bookTitle === chapterTitle) {
+                            bookTitleElement.innerText = null;
+                            document.title = bookTitle;
+                        }
+                    </script>
+
+                    <div class="right-buttons">
+                        
+                        
+                        <a href="https://github.com/ehamiter/ipython-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#bookmark" id="bookmark">bookmark</a></h1>
+<pre class="output">
+%bookmark:
+    Manage IPython's bookmark system.
+</pre>
+<p>Setting bookmarks is very handy if you find yourself changing directories within a project, or even outside a project and would like to be have faster access to often-used directories.</p>
+<pre class="output">
+%bookmark &lt;name&gt;       - set bookmark to current dir
+%bookmark &lt;name&gt; &lt;dir&gt; - set bookmark to &lt;dir&gt;
+%bookmark -l           - list all bookmarks
+%bookmark -d &lt;name&gt;    - remove bookmark
+%bookmark -r           - remove all bookmarks
+</pre>
+<p>Here’s an example that shows setting a bookmark to the current directory, navigating to the user’s home directory, then coming back to the project:</p>
+<pre class="output">
+In [1]: %pwd
+Out[1]: '/Users/eric/projects/ipython-book'
+
+In [2]: %bookmark book
+
+In [3]: %bookmark -l
+Current bookmarks:
+book -> /Users/eric/projects/ipython-book
+
+In [4]: %cd ~
+/Users/eric
+
+In [5]: %pwd
+Out[5]: '/Users/eric'
+
+In [6]: %cd -b book
+(bookmark:book) -> /Users/eric/projects/ipython-book
+/Users/eric/projects/ipython-book
+
+In [7]: %pwd
+Out[7]: '/Users/eric/projects/ipython-book'
+</pre>
+<p>You can also omit the <code>-b</code> after the <code>%cd</code> command if there’s no directory with the name of your bookmark. The bookmarks are associated with each profile and persist through IPython sessions.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../magic/autoreload.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../magic/load.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../magic/autoreload.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../magic/load.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
