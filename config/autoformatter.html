@@ -205,13 +205,15 @@ I owe the grocer $3.40
 <p>It’s very handy for cleaning up your code style, especially if the project you’re working on uses <code>black</code>. In order for this to work, you need to have <code>black</code> installed in your environment:</p>
 <pre><code>pip install black
 </code></pre>
-<p>Once caveat that I have found is that if you <em>do</em> set the autoformatter to <code>black</code>, sometimes it will try and format things that aren’t necessarily code. To be specific, there is a magic command <a href="../magic/history.html"><code>%history</code></a>, or its alias <code>%hist</code>. You use this to list the history of your IPython session’s inputs, and by default it lists them without a corresponding number beside each entry. If you <em>do</em> want to see a numbered list, you need to pass in the parameter <code>n</code>. So, it should look like this:</p>
-<pre><code class="language-python">%history -n
+<p>Once caveat that I have found is that if you <em>do</em> set the autoformatter to <code>black</code>, sometimes it will try and format things that aren’t necessarily code if you omit the optional <code>%</code> prefix. To be specific, there is a magic command <a href="../magic/history.html"><code>%history</code></a>, or its alias <code>%hist</code>. You use this to list the history of your IPython session’s inputs, and by default it lists them without a corresponding number beside each entry. If you <em>do</em> want to see a numbered list, you need to pass in the parameter <code>n</code>. So, it should look like this:</p>
+<pre><code class="language-python">history -n
 </code></pre>
 <p>…but <code>black</code> reformats that, which turns it into</p>
-<pre><code class="language-python">%history - n
+<pre><code class="language-python">history - n
 </code></pre>
-<p>…which isn’t an actual command, so you don’t see the numbers beside each line. So, this is something you should be aware of.</p>
+<p>…which isn’t an actual command, so you don’t see the numbers beside each line. So, this is something you should be aware of. To be safe, if you have <code>black</code> set to autoformat, try to always use the prefix <code>%</code> so there’s no confusion:</p>
+<pre><code class="language-python">%history -n
+</code></pre>
 
                     </main>
 
