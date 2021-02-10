@@ -806,7 +806,7 @@ Out[3]: 'bar'
     Load code into the current frontend.
 </pre>
 <p><code>%load</code> lets you load in code from a filename, input history range, macro, an element in the user namespace, or even from a URL. It is very useful for taking a section of code from something like a GitHub repo and being able to load it directly into the shell so you can test it or use it.</p>
-<p>If you feed in a large section of code, you can specify which lines you want by passing in the range parameter (<code>-r</code>). Below is an example of loading a utility function from the <code>requests</code> library. It passes in the <code>import socket</code> on line 15, and then subsequently loads lines 641-650 for a function that determines if a passed-in string is an IPV4 address:</p>
+<p>If you feed in a large section of code, you can specify which lines you want by passing in the range parameter (<code>-r</code>). Below is an example of loading a utility function from the <code>requests</code> library. It passes in the <code>import socket</code> on line 15, and then subsequently loads lines 651-660 for a function that determines if a passed-in string is an IPV4 address:</p>
 <pre><code class="language-python">In [1]: %load -r 15,651-660 https://raw.githubusercontent.com/psf/requests/master/requests/utils.py
 
 In [2]: # %load -r 15,651-660 https://raw.githubusercontent.com/psf/requests/master/requests/utils.py
